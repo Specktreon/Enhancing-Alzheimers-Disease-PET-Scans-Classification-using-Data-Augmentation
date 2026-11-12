@@ -17,6 +17,12 @@ Medical imaging datasets are small and unbalanced, which limits how well deep le
 | 1. Augmentation | [`Data augmentation.ipynb`](Data%20augmentation.ipynb) | Loads DICOM slices with `pydicom`, resizes them to 160×160, trains a GAN (dense generator and discriminator) and writes synthetic scans back as DICOM files. |
 | 2. Classification | [`custom data generator finale.ipynb`](custom%20data%20generator%20finale.ipynb) | Custom Keras data generator (resize to 128×128 with `scikit-image`), train/validation split, CNN (3 Conv2D + MaxPooling blocks, Dense 512, Dropout), training and evaluation with scikit-learn metrics and confusion matrices. |
 
+## Results
+
+The final model reported in the thesis reached **98.39% accuracy** on the 3-class task (AD / MCI / CN), trained on the GAN-augmented dataset and compared with reference models.
+
+The notebooks in this repository contain the augmentation pipeline and an earlier binary baseline classifier, so the accuracy printed in their outputs is lower than the final result.
+
 ## Tech stack
 
 Python · TensorFlow / Keras · NumPy · pydicom · scikit-image · scikit-learn · Matplotlib · Jupyter
